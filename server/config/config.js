@@ -2,7 +2,6 @@ import path from "path";
 import development from "./env/development";
 import qa from "./env/qa";
 import production from "./env/production";
-import _ from "lodash";
 
 const defaults = { 
 	root: path.join(__dirname, "..", ".."),

@@ -8,7 +8,7 @@ const defaults = {
 	root: path.join(__dirname, "..", ".."),
 	sessionSecret: "fiscus",
 	smtpUser: "yoongeemin@gmail.com",
-	smtpPassword: "jywzaiwblxbqfvug"
+	smtpPassword: "jywzaiwblxbqfvug",
 };
 
 var env = process.env.NODE_ENV || "development";

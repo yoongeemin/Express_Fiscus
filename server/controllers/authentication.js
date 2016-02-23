@@ -3,7 +3,6 @@ import crypto from "crypto";
 import async from "async";
 import config from "../config/config";
 import mustache from "mustache";
-import { emailSubject, emailTemplate } from "../templates/activate.email"
 
 export function signOut(req, res) {
 	req.logout();
@@ -55,15 +54,15 @@ export function signUp(req, res, next) {
 							});
 						},
 						function(token, user, done) {
-							var view = {
+							var context = {
 								protocol: req.protocol,
 								domain: config.domain,
 								uid: req.user,
 								token: token
 							};
 
-							var subject = emailSubject;
-							var html = mustache.render(emailTemplate, view);
+							var subject = "Activate Your Fiscus Account";
+							var html = res.render("activate.email", context);
 
 							sendEmail(user.email, subject, html);
 						}

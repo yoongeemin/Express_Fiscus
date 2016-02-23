@@ -5,7 +5,8 @@ config.debug = true;
 config.devtool = "eval-source-map";
 
 config.plugins = config.plugins.concat([
-	new webpack.HotModuleReplacementPlugin()
+	new webpack.HotModuleReplacementPlugin(),
+	new webpack.NoErrorsPlugin()
 ]);
 
 module.exports = config;

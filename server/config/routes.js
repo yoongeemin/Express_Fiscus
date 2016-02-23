@@ -1,16 +1,25 @@
-import * as userControllers from "../controllers/authentication";
+import * as authenticationControllers from "../controllers/api/authentication";
+import * as 
+
 const API_PREFIX = "/api";
 
 export default function(app, passport) {
-	app.get("/", function(req, res) {
-		res.render();
-	});
-
 	// Local authentication
-	app.get(API_PREFIX+"/signout", userControllers.signOut);
-	app.post(API_PREFIX+"/signin", userControllers.signIn);
-	app.get(API_PREFIX+"/activate/:uid/:token", userControllers.activate);
-	app.post(API_PREFIX+"/signUp", userControllers.signUp);
+	app.get(API_PREFIX+"/signout", authenticationControllers.signOut);
+	app.post(API_PREFIX+"/signin", authenticationControllers.signIn);
+	app.get(API_PREFIX+"/activate/:uid/:token", authenticationControllers.activate);
+	app.post(API_PREFIX+"/signUp", authenticationControllers.signUp);
+
+	app.get("*", function(req, res) {
+		// User signed in
+		if (req.user) {
+			res.render("app", { });
+		}
+		// User not signed in
+		else {
+			res.render("authentication", { });
+		}		
+	});
 
 	//// Error handling
 	//app.use(function (err, req, res, next) {

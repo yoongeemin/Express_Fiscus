@@ -1,5 +1,5 @@
 var webpack = require("webpack");
-var config = require('./webpack.config.base.js');
+var config = require("./webpack.config.base.js");
 
 config.debug = false;
 

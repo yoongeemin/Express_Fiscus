@@ -6,7 +6,7 @@ import csrf from "csurf";
 import path from "path";
 import session from "express-session";
 import connectMongo from "connect-mongo";
-import hogan from "hogan-express";
+import hoganExpress from "hogan-express";
 import config from "./config";
 
 const env = process.env.NODE_ENV || "development";
@@ -20,10 +20,11 @@ module.exports = function(app, passport) {
 
 	// Static files middleware
 	app.use(express.static(config.root + "/static"));
-	app.engine("html", hogan);
-	app.set("view cache", config.viewCache);
+	app.engine("html", hoganExpress);
 	app.set("view engine", "html");
-	app.set("views", config.root + "/server/template");
+	app.set("view cache", config.viewCache);
+	app.set("views", config.root + "/server/templates");
+	app.set("layout", "layouts/base");
 
 	app.use(bodyParser.json());
 	app.use(bodyParser.urlencoded({ extended: true }));

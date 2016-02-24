@@ -1,6 +1,6 @@
 import Authentication from "./containers/authentication";
 import { createStoreWithMiddleware } from "./utils/utils";
-import authenticationReducer from "./reducers/authenticationReducer";
+import authenticationReducer from "./reducers/userReducer";
 import { Provider } from "react-redux";
 
 const authenticationStore = createStoreWithMiddleware(

@@ -13,13 +13,13 @@ class Authentication extends React.Component {
 			this.props.dispatch(
 				AuthenticationActions.signIn(credentials)
 			);
-		}
+		};
 
 		this.handleSignUp = (credentials) => {
 			this.props.dispatch(
 				AuthenticationActions.signUp(credentials)
 			);
-		}
+		};
 	}
 
 	render() {

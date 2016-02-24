@@ -1,7 +1,7 @@
 import bcrypt from "bcrypt-nodejs";
 import mongoose from "mongoose";
 import crypto from "crypto";
-import { AccountSchema } from "./fiscus";
+import { AccountSchema } from "./main";
 
 var UserSchema = new mongoose.Schema({
 	active: {

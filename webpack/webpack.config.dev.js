@@ -13,7 +13,10 @@ _.each(config.entry, function(value, key) {
 
 config.plugins = config.plugins.concat([
 	new webpack.HotModuleReplacementPlugin(),
-	new webpack.NoErrorsPlugin()
+	new webpack.NoErrorsPlugin(),
+	new webpack.DefinePlugin({
+		__ENV__: "DEV"
+	}),
 ]);
 
 module.exports = config;

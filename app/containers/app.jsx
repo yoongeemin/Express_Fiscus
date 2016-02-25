@@ -1,8 +1,16 @@
+import React from "react";
 import { connect } from "react-redux";
+import NavBar from "../components/navbar"
 
 class App extends React.Component {
 	render() {
-		return {this.props.children};
+		return (
+			<div id="app">
+				<NavBar authenticated={false} />
+
+				{this.props.children}
+			</div>
+		);
 	}
 }
 

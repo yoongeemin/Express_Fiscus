@@ -5,6 +5,7 @@ import bootstrapPassport from "./config/passport";
 import bootstrapExpress from "./config/express";
 import bootstrapRoutes from "./config/routes";
 import config from "./config/config";
+import path from "path";
 
 const app = express();
 bootstrapPassport(app, passport);

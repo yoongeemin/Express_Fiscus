@@ -6,25 +6,24 @@ import csrf from "csurf";
 import path from "path";
 import session from "express-session";
 import connectMongo from "connect-mongo";
-import hoganExpress from "hogan-express";
+import methodOverride from "method-override";
 import config from "./config";
 
 const env = process.env.NODE_ENV || "development";
 
-module.exports = function(app, passport) {
+export default function(app, passport) {
 	// Disable X-Powered-By header to prevent attacks
 	app.disable('x-powered-by');
 
 	app.use(compression({ threshold: 512 }));
-	app.use(express.methodOverride());
+	app.use(methodOverride());
 
 	// Static files middleware
-	app.use(express.static(config.root + "/static"));
-	app.engine("html", hoganExpress);
-	app.set("view engine", "html");
-	app.set("view cache", config.viewCache);
-	app.set("views", config.root + "/server/templates");
+	app.use(express.static(path.join(config.root, "static")));
+	app.set("views", path.join(config.root, "server/views"));
+	app.set("view engine", "hjs");
 	app.set("layout", "layouts/base");
+	app.set("view cache", config.viewCache);
 
 	app.use(bodyParser.json());
 	app.use(bodyParser.urlencoded({ extended: true }));

@@ -19,8 +19,7 @@ module.exports = {
 
 	entry: {
 		server: [ path.join(__dirname, "..", "server", "server.js") ],
-		authentication: [ path.join(__dirname, "..", "client", "authentication.jsx") ],
-		app: [ path.join(__dirname, "..", "client", "app.jsx") ]
+		app: [ path.join(__dirname, "..", "app", "client.jsx") ]
 	},
 
 	output: {

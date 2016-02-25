@@ -1,8 +1,7 @@
 import passport from "passport";
 import crypto from "crypto";
 import async from "async";
-import config from "../config/config";
-import mustache from "mustache";
+import config from "../../config/config";
 
 export function signOut(req, res) {
 	req.logout();

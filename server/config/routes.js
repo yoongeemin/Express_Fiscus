@@ -1,5 +1,4 @@
 import * as authenticationControllers from "../controllers/api/authentication";
-import * as 
 
 const API_PREFIX = "/api";
 
@@ -11,14 +10,7 @@ export default function(app, passport) {
 	app.post(API_PREFIX+"/signUp", authenticationControllers.signUp);
 
 	app.get("*", function(req, res) {
-		// User signed in
-		if (req.user) {
-			res.render("app", { });
-		}
-		// User not signed in
-		else {
-			res.render("authentication", { });
-		}		
+		res.render("app", { });
 	});
 
 	//// Error handling

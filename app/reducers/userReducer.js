@@ -3,7 +3,7 @@ import * as Constants from "../utils/constants";
 export default function(state={
 	loading: false,
 	error: null
-}, action) {
+}, action=null) {
 	switch (action.type) {
 		case Constants.SIGNIN_USER_REQUEST:
 		case Constants.SIGNUP_USER_REQUEST:

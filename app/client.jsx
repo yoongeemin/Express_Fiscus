@@ -4,11 +4,12 @@ import { Router, Route, IndexRoute, browserhistory } from "react-router";
 
 import * as containers from "./containers/index";
 import reducers from "./reducers/index";
-import { SignIn, SignUp } from "./components/index";
+import { SignIn, SignUp } from "./containers/index";
 
 const store = configureStore(reducers, browserHistory);
 
 const authentication = (nextState, replace, callback) => {
+	authenticated = false;
 	if (!authenticated) {
 		replace("/signin");
 	}
@@ -27,5 +28,5 @@ ReactDOM.render(
 			</Router>
 		</Provider>
 	),
-	document.getElementById("app")
+	document.body
 );

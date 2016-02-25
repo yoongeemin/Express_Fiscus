@@ -4,6 +4,7 @@ import compression from "compression";
 import cookieParser from "cookie-parser";
 import csrf from "csurf";
 import path from "path";
+import logger from "morgan";
 import session from "express-session";
 import connectMongo from "connect-mongo";
 import methodOverride from "method-override";
@@ -15,10 +16,10 @@ export default function(app, passport) {
 	// Disable X-Powered-By header to prevent attacks
 	app.disable('x-powered-by');
 
+	app.use(logger(env));
 	app.use(compression({ threshold: 512 }));
 	app.use(methodOverride());
 
-	// Static files middleware
 	app.use(express.static(path.join(config.root, "static")));
 	app.set("views", path.join(config.root, "server/views"));
 	app.set("view engine", "hjs");

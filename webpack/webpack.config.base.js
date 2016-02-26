@@ -28,7 +28,8 @@ module.exports = {
 	},
 
 	output: {
-		path: path.join(__dirname, "..", "static", "build"),
+		publicPath: "/assets/",
+		path: path.join(__dirname, "..", "public", "assets"),
 		filename: "[name].js"
 	},
 
@@ -38,9 +39,9 @@ module.exports = {
 		extensions: ["", ".js", ".jsx", ".css", ".scss"]
 	},
 
-	port: 8000,
-
 	plugins: [
+		new webpack.optimize.OccurenceOrderPlugin(),
+
 		// new webpack.optimize.CommonsChunkPlugin("common", "common.bundle.js"),
 		new ExtractTextPlugin("[name].css"),
 
@@ -49,10 +50,6 @@ module.exports = {
 			jQuery: "jquery",
 			_: 		"lodash",
 		}),
-
-		new webpack.DefinePlugin({
-			__PORT__: this.port
-		})
 
 		// 	React: 				"react",
 		// 	ReactDOM: 			"react-dom",

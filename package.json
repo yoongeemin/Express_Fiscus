@@ -47,6 +47,7 @@
     "lodash": "^4.5.0",
     "method-override": "^2.3.5",
     "mongoose": "^4.4.4",
+    "morgan": "^1.7.0",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
     "react": "^0.14.7",
@@ -59,6 +60,6 @@
     "redux-thunk": "^1.0.3",
     "webpack": "^1.12.13",
     "webpack-dev-middleware": "^1.5.1",
-    "webpack-hot-middleware": "^2.7.1"
+    "webpack-dev-server": "^1.14.1"
   }
 }

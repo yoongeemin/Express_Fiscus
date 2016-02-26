@@ -4,8 +4,8 @@ import passport from "passport";
 import bootstrapPassport from "./config/passport";
 import bootstrapExpress from "./config/express";
 import bootstrapRoutes from "./config/routes";
-import config from "./config/config";
 import path from "path";
+import config from "./config/config";
 
 const app = express();
 bootstrapPassport(app, passport);
@@ -17,9 +17,8 @@ connect()
 	.on("open", listen);
 
 function listen() {
-	const port = process.env.PORT || 8000;
-	app.listen(port);
-	console.log("Server starting on port: " + port);
+	app.listen(__PORT__);
+	console.log("Server starting on port: " + __PORT__);
 }
 
 function connect() {

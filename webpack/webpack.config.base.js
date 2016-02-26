@@ -17,6 +17,11 @@ fs.readdirSync("node_modules")
 module.exports = {
 	target: "node",
 
+	node: {
+		__dirname: false,
+		__filename: false,
+	},
+
 	entry: {
 		server: [ path.join(__dirname, "..", "server", "server.js") ],
 		app: [ path.join(__dirname, "..", "app", "client.jsx") ]
@@ -33,6 +38,8 @@ module.exports = {
 		extensions: ["", ".js", ".jsx", ".css", ".scss"]
 	},
 
+	port: 8000,
+
 	plugins: [
 		// new webpack.optimize.CommonsChunkPlugin("common", "common.bundle.js"),
 		new ExtractTextPlugin("[name].css"),
@@ -41,7 +48,12 @@ module.exports = {
 			$: 		"jquery",
 			jQuery: "jquery",
 			_: 		"lodash",
+		}),
+
+		new webpack.DefinePlugin({
+			__PORT__: this.port
 		})
+
 		// 	React: 				"react",
 		// 	ReactDOM: 			"react-dom",
 		// 	Redux: 				"redux",

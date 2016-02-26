@@ -4,7 +4,7 @@ import qa from "./env/qa";
 import production from "./env/production";
 
 const defaults = { 
-	root: path.join(__dirname, "..", ".."),
+	root: path.resolve(__dirname, "..", ".."),
 	sessionSecret: "fiscus",
 	smtpUser: "yoongeemin@gmail.com",
 	smtpPassword: "jywzaiwblxbqfvug",

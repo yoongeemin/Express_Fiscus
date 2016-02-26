@@ -21,7 +21,7 @@ export default function(app, passport) {
 	app.use(methodOverride());
 
 	app.use(express.static(path.join(config.root, "static")));
-	app.set("views", path.join(config.root, "server/views"));
+	app.set("views", path.join(config.root, "server", "views"));
 	app.set("view engine", "hjs");
 	app.set("layout", "layouts/base");
 	app.set("view cache", config.viewCache);

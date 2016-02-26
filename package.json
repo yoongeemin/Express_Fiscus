@@ -7,8 +7,8 @@
     "clean": "rm -rf static/build && mkdir static/build",
     "build:dev": "npm run clean && node_modules/.bin/webpack --config webpack/webpack.config.dev.js --watch",
     "build:prod": "npm run clean && node_modules/.bin/webpack --config webpack/webpack.config.prod.js --watch",
-    "start": "NODE_ENV=production node static/build/server.js",
-    "dev": "NODE_ENV=development node static/build/server.js",
+    "start": "NODE_ENV=production PORT=8000 node static/build/server.js",
+    "dev": "NODE_ENV=development PORT=8000 node static/build/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

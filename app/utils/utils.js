@@ -27,7 +27,7 @@ export function dateToString(date) {
 export function configureStore(reducer, history) {
 	var middlewares = [ thunk,  syncHistory(history) ];
 
-	if (__ENV__ === "DEV") {
+	if (process.env.NODE_ENV === "development") {
 		middlewares.push(createLogger());
 	}
 

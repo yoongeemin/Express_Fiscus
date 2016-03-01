@@ -1,10 +1,10 @@
+import path from "path";
 import express from "express";
 import mongoose from "mongoose";
 import passport from "passport";
 import bootstrapPassport from "./config/passport";
 import bootstrapExpress from "./config/express";
 import bootstrapRoutes from "./config/routes";
-import path from "path";
 import config from "./config/config";
 
 const app = express();
@@ -17,12 +17,11 @@ connect()
 	.on("open", listen);
 
 function listen() {
-	app.listen(__PORT__);
-	console.log("Server starting on port: " + __PORT__);
+	app.listen(process.env.PORT);
+	console.log("Server starting on port: " + process.env.PORT);
 }
 
 function connect() {
 	return mongoose.connect(config.db).connection;
 }
-
 

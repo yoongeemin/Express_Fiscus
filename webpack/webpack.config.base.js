@@ -19,7 +19,7 @@ module.exports = {
 
 	node: {
 		__dirname: false,
-		__filename: false,
+		__filename: false
 	},
 
 	entry: {
@@ -90,7 +90,7 @@ module.exports = {
 				include: /\.json$/,
 				loaders: ["json-loader"]
 			}
-		],
-	},
+		]
+	}
 };
 

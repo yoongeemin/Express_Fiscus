@@ -4,11 +4,11 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "clean": "rm -rf static/build && mkdir static/build",
+    "clean": "rm -rf public/assets && mkdir public/assets",
     "build:dev": "npm run clean && node_modules/.bin/webpack --config webpack/webpack.config.dev.js --watch",
     "build:prod": "npm run clean && node_modules/.bin/webpack --config webpack/webpack.config.prod.js --watch",
-    "start": "NODE_ENV=production PORT=8000 node static/build/server.js",
-    "dev": "NODE_ENV=development PORT=8000 node static/build/server.js",
+    "start": "NODE_ENV=production PORT=8000 node public/assets/server.js",
+    "dev": "NODE_ENV=development PORT=8000 node public/assets/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -44,6 +44,7 @@
     "hjs": "0.0.6",
     "jquery": "^2.2.0",
     "json-loader": "^0.5.4",
+    "koa-passport": "^1.2.0",
     "lodash": "^4.5.0",
     "method-override": "^2.3.5",
     "mongoose": "^4.4.4",
@@ -60,6 +61,7 @@
     "redux-thunk": "^1.0.3",
     "webpack": "^1.12.13",
     "webpack-dev-middleware": "^1.5.1",
-    "webpack-dev-server": "^1.14.1"
+    "webpack-dev-server": "^1.14.1",
+    "webpack-hot-middleware": "^2.8.0"
   }
 }

@@ -10,13 +10,11 @@ import connectMongo from "connect-mongo";
 import methodOverride from "method-override";
 import config from "./config";
 
-const env = process.env.NODE_ENV || "development";
-
 export default function(app, passport) {
 	// Disable X-Powered-By header to prevent attacks
 	app.disable('x-powered-by');
 
-	app.use(logger(env));
+	app.use(logger(process.env.NODE_ENV));
 	app.use(compression({ threshold: 512 }));
 	app.use(methodOverride());
 
@@ -54,4 +52,27 @@ export default function(app, passport) {
 
 	app.use(passport.initialize());
 	app.use(passport.session());
+
+	if (process.env.NODE_ENV === "development") {
+		const webpackConfig = require("../../webpack/webpack.config.dev");
+		const devMiddleware = require("webpack-dev-middleware");
+		const hotMiddleware = require("webpack-hot-middleware");
+		const compiler = require("webpack")(webpackConfig);
+		
+		app.use(devMiddleware(compiler, {
+			publicPath: webpackConfig.output.publicPath,
+			noInfo: true,
+			stats: {
+				color: true
+			}
+		}));
+
+		app.use(hotMiddleware(compiler, {
+			path: "/__webpack_hmr",
+			heartbeat: 10*1000,
+			reload: true,
+			timeout: 2000,
+			log: console.log
+		}));
+	}
 };

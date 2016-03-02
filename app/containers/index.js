@@ -1,1 +1,1 @@
-export App from "./app";
+export NavBar from "./navbar";

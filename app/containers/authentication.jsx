@@ -1,6 +1,5 @@
 import React from "react";
-// import { SIGN_IN, SIGN_UP } from "../utils/constants";
-import * as AuthenticationActions from '../actions/authenticationActionCreator';
+import {signUp} from '../actions/authenticationActionCreator';
 import {Link} from 'react-router';
 
 class Authentication extends React.Component {
@@ -9,7 +8,7 @@ class Authentication extends React.Component {
 
 		this.handleSignUp = (credentials) => {
 			this.props.dispatch(
-				AuthenticationActions.signUp(credentials)
+				signUp(credentials)
 			);
 		};
 	}

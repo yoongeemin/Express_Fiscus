@@ -4,16 +4,18 @@ import { Router, Route, IndexRoute, browserhistory } from "react-router";
 
 import * as containers from "./containers/index";
 import reducers from "./reducers/index";
-import { SignIn, SignUp } from "./containers/index";
+
 
 const store = configureStore(reducers, browserHistory);
 
-const authentication = (nextState, replace, callback) => {
+const authentication = (nextState, replace) => {
 	authenticated = false;
 	if (!authenticated) {
-		replace("/signin");
+		replace({
+			pathname: '/auth',
+			state: { nextPathname: nextState.location.pathname }
+		});
 	}
-	callback();
 };
 
 ReactDOM.render(
@@ -22,7 +24,7 @@ ReactDOM.render(
 			<Router history={browserHistory}>
 				<Route path="/" component={App}>
 					<IndexRoute component={DashBoard} onEnter={authentication} />
-					<Route path="/signin" component={SignIn} />
+					<Route path="/auth" component={Authentication} />
 					<Route path="/signup" component={SignUp} />
 				</Route>
 			</Router>

@@ -54,7 +54,7 @@ export default function(app, passport) {
 	app.use(passport.session());
 
 	if (process.env.NODE_ENV === "development") {
-		const webpackConfig = require("../../webpack/webpack.config.dev");
+		const webpackConfig = require("../../config/app/app.dev");
 		const devMiddleware = require("webpack-dev-middleware");
 		const hotMiddleware = require("webpack-hot-middleware");
 		const compiler = require("webpack")(webpackConfig);

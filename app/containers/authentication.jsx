@@ -3,16 +3,6 @@ import {signUp} from '../actions/authenticationActionCreator';
 import {Link} from 'react-router';
 
 class Authentication extends React.Component {
-	constructor(props) {
-		super(props);
-
-		this.handleSignUp = (credentials) => {
-			this.props.dispatch(
-				signUp(credentials)
-			);
-		};
-	}
-
 	render() {
 		return (
 			<div>

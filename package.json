@@ -4,11 +4,11 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "clean": "rm -rf public/assets && mkdir public/assets",
-    "build:dev": "npm run clean && node_modules/.bin/webpack --config webpack/webpack.config.dev.js --watch",
-    "build:prod": "npm run clean && node_modules/.bin/webpack --config webpack/webpack.config.prod.js --watch",
+    "clean": "gulp clean",
+    "build:dev": "gulp build:dev",
+    "build:prod": "gulp build:prod",
+    "run:dev": "gulp run:dev",
     "start": "NODE_ENV=production PORT=8000 node public/assets/server.js",
-    "dev": "NODE_ENV=development PORT=8000 node public/assets/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

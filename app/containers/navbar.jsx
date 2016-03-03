@@ -16,7 +16,6 @@ class NavBar extends React.Component {
 		};
 	}
 
-
 	render() {
 		var navbarComponents = this.props.authenticated
 			? <a onClick={this.props.onSignOut} href="javascript:void(0);">Sign Out</a> 
@@ -49,6 +48,8 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps)(NavBar);
+
+
 
 
 

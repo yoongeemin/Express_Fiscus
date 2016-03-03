@@ -48,7 +48,7 @@ module.exports = {
 		new webpack.ProvidePlugin({
 			$: 		"jquery",
 			jQuery: "jquery",
-			_: 		"lodash",
+			_: 		"lodash"
 		}),
 
 		// 	React: 				"react",

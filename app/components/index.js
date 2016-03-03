@@ -1,3 +1,3 @@
-export * from "./tickers";
-export * from "./dashboard";
-export * from "./signIn";
+export Ticker from "./tickers";
+export Dashboard from "./dashboard";
+export SignIn from "./signIn";

@@ -1,7 +1,7 @@
 import React from "react";
 import classnames from "classnames";
 import { connect } from "react-redux";
-import { signIn } from '../actions/authenticationActionCreator';
+import { signIn } from '../actions/userActionCreator';
 
 class NavBar extends React.Component {
 	static propTypes = {

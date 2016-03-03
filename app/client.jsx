@@ -9,7 +9,7 @@ import * as containers from "./containers/index";
 import reducers from "./reducers/index";
 
 const store = configureStore(reducers, browserHistory);
-const history = syncHistoryWithStore(browserHistory, store)
+const history = syncHistoryWithStore(browserHistory, store);
 
 const authentication = (nextState, replace) => {
 	authenticated = false;
@@ -29,7 +29,7 @@ ReactDOM.render(
 					<IndexRoute onEnter={authentication} />
 					<Route path="/signin" component={Authentication} />
 					<Route path="/signup" component={SignUp} />
-					<Route path="/dashboard" component={Dashboard}>
+					<Route path="/dashboard" component={Dashboard} />
 				</Route>
 			</Router>
 		</Provider>

@@ -1,57 +1,44 @@
-// import express from "express";
-// import bodyParser from "body-parser";
-// import compression from "compression";
-// import cookieParser from "cookie-parser";
-// import csrf from "csurf";
-// import path from "path";
-// import logger from "morgan";
-// import session from "express-session";
-// import connectMongo from "connect-mongo";
-// import methodOverride from "method-override";
-
-// const env = process.env.NODE_ENV || "development";
-
+import path from "path";
 import logger from "koa-logger";
-import json from "koa-json";
-import views from "co-views";
+import responeTime from "koa-response-time";
 import bodyParser from "koa-bodyparser";
 import compress from "koa-compress";
-import statics from "koa-static";
+import serve from "koa-static";
+import session from "koa-generic-session";
+import MongoStore from "koa-generic-session-mongo";
+import methodOverride from "koa-methodoverride";
+import csrf from "koa-csrf";
+import views from "co-views";
 import config from "./config";
 
 export default function(app, passport) {
-	app.use(logger());
-	app.use(compress({ threshold: 512 }));
-	app.use(json());
-	app.use(bodyParser());
+	if (process.env.NODE_ENV === "development")
+		app.use(logger());
 
-	app.use(statics(path.join(config.root, "static")));
-	app.use(views(__dirname + '/views', {
-		map: { hjs: 'hogan' },
+	app.use(methodOverride());
+	app.use(responeTime());
+	app.use(compress());
+	app.use(bodyParser());	
+	app.use(csrf());
+	
+	app.use(serve(path.resolve(config.root, "public")));	
+	app.use(views(__dirname + "/views", {
+		map: { hjs: "hogan" },
 		cache: config.viewCache
 	}));
 
-	var MongoStore = connectMongo(session);
+	app.keys = config.sessionSecret;
 	app.use(session({
-		resave: true,
-		saveUninitialized: false,
-		secret: config.sessionSecret,
-		proxy: true,
-		name: "sessionId",
 		cookie: {
 			httpOnly: true,
-			secure: false
+			signed: true
 		},
 		store: new MongoStore({
 			url: config.db,
-			autoReconnect: true
+			ssl : true
 		})
 	}));
-
-	app.use(csrf());
 	
-	// Required for Heroku deployment
-	app.set('trust proxy', 'loopback');
 
 	app.use(passport.initialize());
 	app.use(passport.session());

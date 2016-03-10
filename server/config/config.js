@@ -1,3 +1,4 @@
+import _ from "lodash";
 import path from "path";
 import development from "./env/development";
 import qa from "./env/qa";
@@ -7,7 +8,7 @@ const defaults = {
 	root: path.resolve(__dirname, "..", ".."),
 	sessionSecret: "fiscus",
 	smtpUser: "yoongeemin@gmail.com",
-	smtpPassword: "jywzaiwblxbqfvug",
+	smtpPassword: "jywzaiwblxbqfvug"
 };
 
 var env = process.env.NODE_ENV || "development";

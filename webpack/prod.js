@@ -1,6 +1,7 @@
+var webpack = require("webpack");
 var base = require("./base");
 
-base.debug: false;
+base.debug = false;
 
 base.plugins = base.plugins.concat([
 	new webpack.optimize.DedupePlugin(),

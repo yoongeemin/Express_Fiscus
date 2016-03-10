@@ -1,6 +1,5 @@
-import mongoose from "mongoose";
 import { Strategy as LocalStrategy } from "passport-local";
-import User from "../../models/User";
+import User from "../../models/user";
 
 export default new LocalStrategy(
 	{ usernameField: "login" },
@@ -13,15 +12,15 @@ export default new LocalStrategy(
 					if (!userByMobile) {
 						return done(null, false, { message: "Invalid login or password" });
 					}
-					return authenticateUser(userByMobile, password);
+					return authenticateUser(userByMobile, password, done);
 				});
 			}
-			return authenticateUser(userByEmail, password);
+			return authenticateUser(userByEmail, password, done);
 		});
 	}
 );
 
-function authenticateUser(user, password) {
+function authenticateUser(user, password, done) {
 	return user.authenticate(password, function(err, match) {
 		if (match) {
 			return done(null, user);

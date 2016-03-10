@@ -1,4 +1,3 @@
-var path = require("path");
 var base = require("./base");
 
 base.debug = true;
@@ -11,6 +10,5 @@ base.module.preLoaders = [
 		loader: "eslint-loader"
 	}
 ];
-
 
 module.exports = base;

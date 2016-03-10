@@ -54,23 +54,23 @@ export default function(app, passport) {
 	app.use(passport.session());
 
 	if (process.env.NODE_ENV === "development") {
-		const webpackConfig = require("../../config/app/app.dev");
-		const devMiddleware = require("webpack-dev-middleware");
-		const hotMiddleware = require("webpack-hot-middleware");
-		const compiler = require("webpack")(webpackConfig);
+		// const webpackConfig = require("../../webpack/app/app.dev");
+		// const devMiddleware = require("webpack-dev-middleware");
+		// const hotMiddleware = require("webpack-hot-middleware");
+		// const compiler = require("webpack")(webpackConfig);
 		
-		app.use(devMiddleware(compiler, {
-			publicPath: webpackConfig.output.publicPath,
-			noInfo: true,
-			stats: {
-				color: true
-			}
-		}));
+		// app.use(devMiddleware(compiler, {
+		// 	publicPath: webpackConfig.output.publicPath,
+		// 	noInfo: true,
+		// 	stats: {
+		// 		color: true
+		// 	}
+		// }));
 
-		app.use(hotMiddleware(compiler, {
-			heartbeat: 10*1000,
-			reload: true,
-			timeout: 20000,
-		}));
+		// app.use(hotMiddleware(compiler, {
+		// 	heartbeat: 10*1000,
+		// 	reload: true,
+		// 	timeout: 20000
+		// }));
 	}
-};
+}

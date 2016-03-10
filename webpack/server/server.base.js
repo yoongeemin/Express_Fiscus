@@ -1,4 +1,5 @@
 var path = require("path");
+var fs = require("fs");
 
 // Resolve binary dependency in node modules
 var nodeModules = {};
@@ -18,7 +19,7 @@ module.exports = {
 		__filename: false	
 	},
 
-	entry: [ path.resolve(__dirname, "..", "..", ".." "server", "server.js") ],
+	entry: [ path.resolve(__dirname, "..", "..", "server", "server.js") ],
 
 	output: {
 		filename: "server.js"

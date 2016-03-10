@@ -1,4 +1,5 @@
 import local from "./passport/local";
+import User from "../models/user";
 
 export default function(app, passport) {
 	passport.serializeUser(function(user, done) {

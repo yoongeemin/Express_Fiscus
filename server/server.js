@@ -1,4 +1,3 @@
-import path from "path";
 import express from "express";
 import mongoose from "mongoose";
 import passport from "passport";
@@ -10,7 +9,7 @@ import config from "./config/config";
 const app = express();
 bootstrapPassport(app, passport);
 bootstrapExpress(app, passport);
-bootstrapRoutes(app, passport);
+bootstrapRoutes(app);
 
 connect()
 	.on("error", console.error)

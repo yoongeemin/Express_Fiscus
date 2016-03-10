@@ -1,14 +1,16 @@
 import passport from "passport";
 import crypto from "crypto";
 import async from "async";
+import nodemailer from "nodemailer";
 import config from "../../config/config";
+import User from "../../models/user";
 
 export function signOut(req, res) {
 	req.logout();
 	res.redirect("/");
 }
 
-export function signIn(req, res, next) {
+export function signIn() {
 	passport.authenticate("local", {
 		successRedirect: "/",
 		failureRedirect: "/",
@@ -63,7 +65,7 @@ export function signUp(req, res, next) {
 							var subject = "Activate Your Fiscus Account";
 							var html = res.render("activate.email", context);
 
-							sendEmail(user.email, subject, html);
+							sendEmail(user.email, subject, html, done);
 						}
 					], function(err) {
 						if (err)
@@ -77,15 +79,17 @@ export function signUp(req, res, next) {
 
 }
 
-export function activate(req, res, next) {
+export function activate(req, res) {
+	var token = req.params.token;
+
 	// Find user by email
 	User.findOne({ 
 		id: req.params.uid,
-		token: req.params.token,
+		token: token,
 		tokenExpiration: { $gt: Date.now() }
-	}, function(err, user) {
+	}, function(err, user, done) {
 		if (!user) {
-	      req.flash("error", "Activation token is invalid or has expired");
+			req.flash("error", "Activation token is invalid or has expired");
 		}
 		else {
 			user.active = true;
@@ -97,7 +101,7 @@ export function activate(req, res, next) {
 	});	
 }
 
-function sendEmail(to, subject, html) {
+function sendEmail(to, subject, html, done) {
 	var smtpTransport = nodemailer.createTransport("SMTP", {
 		service: "Gmail",
 		auth: {

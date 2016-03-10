@@ -1,15 +1,15 @@
-import { configureStore } from "./utils/utils";
 import { Provider } from "react-redux";
-import { Router, Route, IndexRoute, browserhistory } from "react-router";
+import React from "react";
+import ReactDOM from "react-dom";
+import { Router, Route, IndexRoute, browserHistory } from "react-router";
 import { syncHistoryWithStore } from "react-router-redux";
-import { SignIn, Dashboard} from "./components/index";
-import { App, Authentication, SignUp} from "./containers/index";
-
-import * as containers from "./containers/index";
+import { configureStore } from "./utils/utils";
+import { Dashboard} from "./components/index";
+import { App, Authentication, SignUp } from "./containers/index";
 import reducers from "./reducers/index";
 
-const store = configureStore(reducers, browserHistory);
-const history = syncHistoryWithStore(browserHistory, store);
+const store = configureStore(reducers, browserhistory);
+const history = syncHistoryWithStore(browserhistory, store);
 
 const authentication = (nextState, replace) => {
 	authenticated = false;

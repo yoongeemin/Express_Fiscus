@@ -2,7 +2,7 @@ import * as authenticationControllers from "../controllers/api/authentication";
 
 const API_PREFIX = "/api";
 
-export default function(app, passport) {
+export default function(app) {
 	// Local authentication
 	app.get(API_PREFIX+"/signout", authenticationControllers.signOut);
 	app.post(API_PREFIX+"/signin", authenticationControllers.signIn);
@@ -38,6 +38,6 @@ export default function(app, passport) {
 	//		error: 'Not found'
 	//	});
 	//});
-};
+}
 
 

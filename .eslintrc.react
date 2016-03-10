@@ -1,13 +1,17 @@
 {
-	env: {
-		es6: true
+	"env": {
+		"es6": true
 	},
 
-	parserOptions: {
-		ecmaVersion: 6
+	"parserOptions": {
+		"ecmaVersion": 6,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true
+		}
 	},
 
-	plugins: [ "react" ],
+	"plugins": [ "react" ],
 
-	extends: [ "eslint:recommended", "plugin:react/recommended" ]
+	"extends": "airbnb"
 }

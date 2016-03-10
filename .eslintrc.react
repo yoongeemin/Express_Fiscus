@@ -13,5 +13,5 @@
 
 	"plugins": [ "react" ],
 
-	"extends": "airbnb"
+	"extends": [ "airbnb", "plugin:react/recommended" ]
 }

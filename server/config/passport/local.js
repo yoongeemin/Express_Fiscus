@@ -1,31 +1,28 @@
 import { Strategy as LocalStrategy } from "passport-local";
 import User from "../../models/user";
+import co from "co";
 
-export default new LocalStrategy(
-	{ usernameField: "login" },
-	function(login, password, done) {
-		// Find user by email
-		User.findOne({ email: login }, function(err, userByEmail) {
-			if (!userByEmail) {
+export default new LocalStrategy({ usernameField: "signin" }, signIn);
+
+function signIn(signin, password, done) {
+	co(function* () {
+		try {
+			// Find user by email
+			var userByEmail = yield User.findOne({ email: signin }).exec();
+			if (userByEmail) return yield* authenticateUser(userByEmail, password, done);
+			else {
 				// Find user by mobile
-				User.findOne({ mobile: login }, function(err, userByMobile) {
-					if (!userByMobile) {
-						return done(null, false, { message: "Invalid login or password" });
-					}
-					return authenticateUser(userByMobile, password, done);
-				});
+				var userByMobile = yield User.findOne({ mobile: signin }).exec();
+				if (userByMobile) return yield* authenticateUser(userByMobile, password, done);
+				else done(null, false, { message: "Invalid user or password" });
 			}
-			return authenticateUser(userByEmail, password, done);
-		});
-	}
-);
-
-function authenticateUser(user, password, done) {
-	return user.authenticate(password, function(err, match) {
-		if (match) {
-			return done(null, user);
 		}
-		return done(null, false, { message: "Invalid login or password" })
+		catch(err) done(err);
 	});
 }
 
+function* authenticateUser(user, password, done) {
+	var match = yield* user.authenticate(password);
+	if (match) done(null, user);
+	else done(null, false, { message: "Invalid user or password" });
+}

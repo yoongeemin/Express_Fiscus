@@ -1,6 +1,9 @@
-import bcrypt from "bcrypt-nodejs";
+import co from "co";
+import bcrypt from "../lib/promises/bcrypt";
 import mongoose from "mongoose";
 import { AccountSchema } from "./main";
+
+const SALT_ROUNDS = 5;
 
 var UserSchema = new mongoose.Schema({
 	active: {
@@ -9,16 +12,31 @@ var UserSchema = new mongoose.Schema({
 	},
 	email: {
 		type: String,
+		required: true,
 		unique: true,
 		lowercase: true
 	},
-	mobile: Number,
-	password: String,
+	mobile: {
+		type: Number,
+		required: false
+	},
+	password: {
+		type: String,
+		required: true
+	},
 	token: String,
 	tokenExpiration: Date,
 	profile: {
-		firstName: String,
-		lastName: String,
+		firstName: {
+			type: String,
+			required: true,
+			lowercase: true
+		},
+		lastName: {
+			type: String,
+			required: true,
+			lowercase: true
+		},
 		accounts: [AccountSchema],
 		preference: {
 
@@ -27,30 +45,29 @@ var UserSchema = new mongoose.Schema({
 });
 
 // Hash user password
-UserSchema.pre("save", function(next) {
+UserSchema.pre("save", function(done) {
 	var user = this;
+
+	// Only hash the password if it has been added or modified
 	if (!user.isModified("password"))
-		return next();
+		return done();
 	
-	bcrypt.genSalt(5, function(err, salt) {
-		if (err)
-			return next(err);
-		bcrypt.hash(user.password, salt, null, function(err, hash) {
-			if (err)
-				return next(err);
+	co(function* () {
+		try {
+			var salt = yield bcrypt.genSalt(SALT_ROUNDS);
+			var hash = yield bcrypt.hash(user.password, salt);
 			user.password = hash;
-			next();
-		})
-	});
+			done();			
+		}
+		catch(err) {
+			done(err);
+		}
+	}).then(done);
 });
 
 UserSchema.methods = {
-	authenticate: function(password, cb) {
-		bcrypt.compare(password, this.password, function(err, isMatch) {
-			if (err)
-				return cb(err);
-			cb(null, isMatch);
-		});
+	authenticate: function* (password) {
+		return yield bcrypt.compare(password, this.password);
 	}
 };
 

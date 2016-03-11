@@ -1,14 +1,14 @@
-import express from "express";
+import koa from "koa";
 import mongoose from "mongoose";
 import passport from "passport";
 import bootstrapPassport from "./config/passport";
-import bootstrapExpress from "./config/express";
+import bootstrapKoa from "./config/koa";
 import bootstrapRoutes from "./config/routes";
 import config from "./config/config";
 
-const app = express();
+const app = koa();
 bootstrapPassport(app, passport);
-bootstrapExpress(app, passport);
+bootstrapKoa(app, passport);
 bootstrapRoutes(app);
 
 connect()
@@ -23,4 +23,3 @@ function listen() {
 function connect() {
 	return mongoose.connect(config.db).connection;
 }
-

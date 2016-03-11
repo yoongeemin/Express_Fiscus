@@ -4,8 +4,8 @@ const API_PREFIX = "/api";
 
 export default function(app) {
 	// Local authentication
-	app.get(API_PREFIX+"/signout", authenticationControllers.signOut);
 	app.post(API_PREFIX+"/signin", authenticationControllers.signIn);
+	app.get(API_PREFIX+"/signout", authenticationControllers.signOut);
 	app.get(API_PREFIX+"/activate/:uid/:token", authenticationControllers.activate);
 	app.post(API_PREFIX+"/signUp", authenticationControllers.signUp);
 

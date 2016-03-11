@@ -6,14 +6,13 @@ import production from "./env/production";
 
 const defaults = { 
 	root: path.resolve(__dirname, "..", ".."),
-	sessionSecret: "fiscus",
+	sessionSecret: ["shhh", "this is a secret"]
 	smtpUser: "yoongeemin@gmail.com",
 	smtpPassword: "jywzaiwblxbqfvug"
 };
 
-var env = process.env.NODE_ENV || "development";
 var config;
-switch (env) {
+switch (process.env.NODE_ENV) {
 	case "development":
 		config = development;
 		break;

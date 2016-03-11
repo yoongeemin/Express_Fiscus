@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 import { Router, Route, IndexRoute, browserHistory } from "react-router";
 import { syncHistoryWithStore } from "react-router-redux";
 import { configureStore } from "./utils/utils";
-import { Dashboard} from "./components/index";
+import { Dashboard } from "./components/index";
 import { App, Authentication, SignUp } from "./containers/index";
 import reducers from "./reducers/index";
 
@@ -12,7 +12,7 @@ const store = configureStore(reducers, browserhistory);
 const history = syncHistoryWithStore(browserhistory, store);
 
 const authentication = (nextState, replace) => {
-	authenticated = false;
+	let authenticated = false;
 	if (!authenticated) {
 		replace("/signin");
 	}

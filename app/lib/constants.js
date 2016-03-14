@@ -1,39 +1,39 @@
 function define(name, value) {
 	Object.defineProperty(module.exports, name, {
-		value:      	value,
-		enumerable: 	true,
-		writable: 		false,
-		configurable: 	false
+		value,
+		enumerable: true,
+		writable: false,
+		configurable: false,
 	});
 }
 
 const MODAL_STYLE = {
 	position: "fixed",
-	top: 0, bottom: 0, left: 0, right: 0
+	top: 0, bottom: 0, left: 0, right: 0,
 };
 
 const BACKDROP_STYLE = {
 	zIndex: 1001,
 	backgroundColor: "#FFFFFF",
-	opacity: 0.3
+	opacity: 0.3,
 };
 
 define("MODAL_STYLE", 					MODAL_STYLE);
 define("BACKDROP_STYLE", 				BACKDROP_STYLE);
 
 define("HOST",							"http://localhost:8000/");
-define("SIGNIN_API",					module.exports.HOST+"api/signin/");
-define("SIGNOUT_API",					module.exports.HOST+"api/signout/");
-define("SIGNUP_API",					module.exports.HOST+"api/signup/");
-define("ACTIVATE_API",					module.exports.HOST+"api/activate/");
-define("USER_PROFILE_API",				module.exports.HOST+"api/user/");
-define("ACCOUNT_API",					module.exports.HOST+"api/accounts/");
-define("ACCOUNT_TRANSACTION_API",		module.exports.HOST+"api/accounts/%s/transactions/");
+define("SIGNIN_API",					`${module.exports.HOST}api/signin/`);
+define("SIGNOUT_API",					`${module.exports.HOST}api/signout/`);
+define("SIGNUP_API",					`${module.exports.HOST}api/signup/`);
+define("ACTIVATE_API",					`${module.exports.HOST}api/activate/`);
+define("USER_PROFILE_API",				`${module.exports.HOST}api/user/`);
+define("ACCOUNT_API",					`${module.exports.HOST}api/accounts/`);
+define("ACCOUNT_TRANSACTION_API",		`${module.exports.HOST}api/accounts/%s/transactions/`);
 
-define("TRANSACTION_API",				module.exports.HOST+"api/transactions/");
-define("TRANSACTION_DETAIL_API",		module.exports.HOST+"api/transactions/%s/");
-define("CATEGORY_API",					module.exports.HOST+"api/categories/");
-define("QUOTE_API",						module.exports.HOST+"api/quotes/");
+define("TRANSACTION_API",				`${module.exports.HOST}+"api/transactions/`);
+define("TRANSACTION_DETAIL_API",		`${module.exports.HOST}+"api/transactions/%s/`);
+define("CATEGORY_API",					`${module.exports.HOST}+"api/categories/`);
+define("QUOTE_API",						`${module.exports.HOST}+"api/quotes/`);
 
 define("GET", 							"GET");
 define("POST", 							"POST");

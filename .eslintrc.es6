@@ -1,7 +1,7 @@
 {
-	"env": {
-		"node": true
-	},
+	"extends": ["./.eslintrc.base"],
 
-	"extends": [ "./.eslintrc.base" ]
+    "env": {
+        "node": true,
+    },
 }

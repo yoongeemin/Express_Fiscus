@@ -1,11 +1,15 @@
 {
-	"parserOptions": {
-		"ecmaFeatures": {
-			"jsx": true
-		}
-	},
+	"extends": ["./.eslintrc.base", "plugin:react/recommended"],
+	
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true,
+        }
+    },
 
-	"plugins": [ "react" ],
+    "plugins": ["react"],
 
-	"extends": [ "./.eslintrc.base", "plugin:react/recommended" ]
+    "rules": {
+        "react/prefer-stateless-function": 0,
+    },
 }

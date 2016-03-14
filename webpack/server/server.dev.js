@@ -1,14 +1,13 @@
-var path = require("path");
-var _ = require("lodash");
-var dev = require("../dev");
-var server = require("./server.base");
+const path = require("path");
+const Configurator = require("webpack-config");
 
-server.eslint = {
-	configFile: path.resolve(__dirname, "..", "..", ".eslintrc.es6")
-};
+console.log(path.resolve("./server.base"));
 
-module.exports = _.merge(dev, server, function(x, y) {
-	if (_.isArray(x) && _.isArray(y)) {
-		return x.concat(y);
-	}
+module.exports = new Configurator()
+.extend(path.resolve(__dirname, "server.base"))
+.extend(path.resolve(__dirname, "..", "dev"))
+.merge({
+    eslint: {
+        configFile: path.resolve(__dirname, "..", "..", ".eslintrc.es6"),
+    },
 });

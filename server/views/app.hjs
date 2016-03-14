@@ -1,12 +1,14 @@
-{{#yield-styles}}
-	<link rel="stylesheet" href="/build/app.css" />
-{{/yield-styles}}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fiscus</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/assets/common.css" />
+        <link rel="stylesheet" href="/assets/app.css" />
+    </head>
 
-
-{{#yield-body}}
-{{/yield-body}}
-
-
-{{#yield-scripts}}
-	<script type="text/javascript" src="/build/app.js"></script>
-{{/yield-scripts}}
+    <body>
+        <script type="text/javascript" src="/assets/common.js"></script>
+        <script type="text/javascript" src="/assets/app.js"></script>
+    </body>
+</html>

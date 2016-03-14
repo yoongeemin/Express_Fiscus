@@ -1,16 +1,16 @@
-import * as Constants from "../utils/constants";
+import * as Constants from "../lib/constants";
 
-export default function(state={
+export default function(state = {
 	loading: false,
-	error: null
-}, action=null) {
+	error: null,
+}, action = null) {
 	switch (action.type) {
 		case Constants.SIGNIN_USER_REQUEST:
 		case Constants.SIGNUP_USER_REQUEST:
 		case Constants.SIGNOUT_USER_REQUEST:
 		case Constants.ACTIVATE_USER_REQUEST:
 			return Object.assign({}, state, {
-				loading: true
+				loading: true,
 			});
 		case Constants.SIGNIN_USER_SUCCESS:
 		case Constants.SIGNUP_USER_SUCCESS:
@@ -18,7 +18,7 @@ export default function(state={
 		case Constants.ACTIVATE_USER_SUCCESS:
 			return Object.assign({}, state, {
 				loading: false,
-				error: null
+				error: null,
 			});
 		case Constants.SIGNIN_USER_FAILURE:
 		case Constants.SIGNOUT_USER_FAILURE:
@@ -26,13 +26,9 @@ export default function(state={
 		case Constants.ACTIVATE_USER_FAILURE:
 			return Object.assign({}, state, {
 				loading: false,
-				error: action.error
+				error: action.error,
 			});
 		default:
 			return state;
 	}
 }
-
-
-
-

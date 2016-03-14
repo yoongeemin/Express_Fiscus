@@ -1,14 +1,20 @@
-var base = require("./base");
+const path = require("path");
+const Configurator = require("webpack-config");
 
-base.debug = true;
-base.devtool = "eval-cheap-module-source-map";
+module.exports = new Configurator()
+.extend(path.resolve(__dirname, "base"))
+.merge({
+	debug: true,
 
-base.module.preLoaders = [
-	{
-		test: /\.jsx?$/,
-		exclude: /node_modules/,
-		loader: "eslint-loader"
-	}
-];
+	devtool: "eval-cheap-module-source-map",
 
-module.exports = base;
+	module: {
+		preLoaders: [
+		    {
+		        test: /\.jsx?$/,
+		        exclude: /node_modules/,
+		        loader: "eslint-loader",
+		    },
+		]
+	},
+});

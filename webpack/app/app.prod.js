@@ -1,9 +1,7 @@
-var prod = require("../prod");
-var app = require("./app.base");
-var _ = require("lodash");
+const path = require("path");
+const Configurator = require("webpack-config");
 
-module.exports = _.merge(prod, app, function(x, y) {
-	if (_.isArray(x) && _.isArray(y)) {
-		return x.concat(y);
-	}
-});
+module.exports = new Configurator()
+.extend(path.resolve(__dirname, "app.base"))
+.extend(path.resolve(__dirname, "..", "prod"))
+.merge({ });

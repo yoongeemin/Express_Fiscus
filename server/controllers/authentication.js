@@ -1,122 +1,88 @@
 import passport from "koa-passport";
-import crypto from "crypto";
-import async from "async";
-import nodemailer from "nodemailer";
-import config from "../../config/config";
-import User from "../../models/user";
+import config from "../config/config";
+import User from "../models/user";
+import crypt from "../lib/promises/crypt";
+import mailer from "../lib/promises/mailer";
+
+const TOKEN_SIZE = 256;
 
 export function* signIn() {
-	yield* passport.authenticate("local", {
-		successRedirect: "/",
-		failureRedirect: "/",
-		failureFlash: true
-	});
+    yield* passport.authenticate("local", {
+        successRedirect: "/",
+        failureRedirect: "/",
+    });
 }
 
 export function* signOut() {
-	this.logout();
-	this.session = null;
+    this.logout();
+    this.session = null;
 }
 
-export function signUp(req, res, next) {
-	// Find user by email
-	User.findOne({ email: req.body.email }, function(err, userByEmail) {
-		if (userByEmail) {
-			req.flash("errors", { err: "Email already exists" })
-		}
-		else {
-			// Find user by mobile
-			User.findOne({ phone: req.body.phone }, function(err, userByMobile) {
-				if (userByMobile) {
-					req.flash("errors", { err: "Phone number already exists" })
-				}
-				else {
-					async.waterfall([
-						function(done) {
-							crypto.randomBytes(20, function(err, buf) {
-								var token = buf.toString("hex");
-								done(err, token);
-							})
-						},
-						function(token, done) {
-							var user = new User({
-								firstName: req.body.firstName,
-								lastName: req.body.lastName,
-								email: req.body.email,
-								mobile: req.body.mobile,
-								password: req.body.password
-							});
+export function* signUp() {
+    const userByEmail = yield User.findOne({ email: this.request.body.email }).exec();
+    if (userByEmail) this.throw("Email already exists");
+    else {
+        const userByMobile = yield User.findOne({ email: this.request.body.mobile }).exec();
+        if (userByMobile) this.throw("Phone number already exists");
+        else {
+            try {
+                const token = yield crypt.randomBytes(TOKEN_SIZE);
 
-							user.token = token;
-							user.tokenExpiration = Date.now() + 3600000 // 1 hour;
+                let user = new User({
+                    firstName: this.request.body.firstName,
+                    lastName: this.request.body.lastName,
+                    email: this.request.body.email,
+                    mobile: this.request.body.mobile,
+                    password: this.request.body.password,
+                });
 
-							user.save(function(err) {
-								done(err, token, user);
-							});
-						},
-						function(token, user, done) {
-							var context = {
-								protocol: req.protocol,
-								domain: config.domain,
-								uid: req.user,
-								token: token
-							};
+                user.token = token;
+                user.tokenExpiration = Date.now() + 3600000; // 1 hour;
 
-							var subject = "Activate Your Fiscus Account";
-							var html = res.render("activate.email", context);
+                user = yield user.save();
 
-							sendEmail(user.email, subject, html, done);
-						}
-					], function(err) {
-						if (err)
-							return next(err);
-						res.redirect("/");
-					});
-				}
-			});
-		}
-	});
+                const context = {
+                    protocol: this.request.protocol,
+                    domain: config.domain,
+                    uid: this.request.user,
+                    token,
+                };
 
+                const SUBJECT = "Activate Your Fiscus Account";
+                const HTML = yield this.render("activate.email", context);
+                yield mailer.sendEmail(
+                    config.smtpUser,
+                    config.smtpPassword,
+                    user.email,
+                    SUBJECT,
+                    HTML
+                );
+            }
+            catch (err) {
+                this.throw("Error while signing up user");
+            }
+        }
+    }
 }
 
-export function activate(req, res) {
-	var token = req.params.token;
-
-	// Find user by email
-	User.findOne({ 
-		id: req.params.uid,
-		token: token,
-		tokenExpiration: { $gt: Date.now() }
-	}, function(err, user, done) {
-		if (!user) {
-			req.flash("error", "Activation token is invalid or has expired");
-		}
-		else {
-			user.active = true;
-			user.save(function(err) {
-				done(err, token, user);
-			});
-			res.redirect("/");
-		}
-	});	
-}
-
-function sendEmail(to, subject, html, done) {
-	var smtpTransport = nodemailer.createTransport("SMTP", {
-		service: "Gmail",
-		auth: {
-			user: config.smtpUser,
-			pass: config.smtpPassword
-		}
-	});
-
-	smtpTransport.sendMail({
-		from: config.smtpUser,
-		to: to,
-		subject: subject,
-		html: html
-	}, function(err, response) {
-		done(err, response);
-	});
-}
-
+//export function* activate() {
+//    const token = this.params.token;
+//
+//    // Find user by email
+//    User.findOne({
+//        id: req.params.uid,
+//        token,
+//        tokenExpiration: { $gt: Date.now() },
+//    }, (err, user, done) => {
+//        if (!user) {
+//            req.flash("error", "Activation token is invalid or has expired");
+//        }
+//        else {
+//            user.active = true;
+//            user.save(err => {
+//                done(err, token, user);
+//            });
+//            res.redirect("/");
+//        }
+//    });
+//}

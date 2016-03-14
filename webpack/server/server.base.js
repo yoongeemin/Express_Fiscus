@@ -1,29 +1,30 @@
-var path = require("path");
-var fs = require("fs");
+const path = require("path");
+const fs = require("fs");
+const Configurator = require("webpack-config");
 
 // Resolve binary dependency in node modules
-var nodeModules = {};
+const nodeModules = {};
 fs.readdirSync("node_modules")
-	.filter(function(mod) {
-		return [".bin"].indexOf(mod) === -1;
-	})
-	.forEach(function(mod) {
-		nodeModules[mod] = "commonjs " + mod;
-	});
+    .filter(mod => {
+        return [".bin"].indexOf(mod) === -1;
+    })
+    .forEach(mod => {
+        nodeModules[mod] = `commonjs ${mod}`;
+    });
 
-module.exports = {
-	target: "node",
+module.exports = new Configurator().merge({
+    target: "node",
 
-	node: {
-		__dirname: false,
-		__filename: false	
-	},
+    node: {
+        __dirname: true,
+        __filename: true,
+    },
 
-	entry: [ path.resolve(__dirname, "..", "..", "server", "server.js") ],
+    entry: [path.resolve(__dirname, "..", "..", "server", "server.js")],
 
-	output: {
-		filename: "server.js"
-	},
+    output: {
+        filename: "server.js",
+    },
 
-	externals: nodeModules
-};
+    externals: nodeModules,
+});

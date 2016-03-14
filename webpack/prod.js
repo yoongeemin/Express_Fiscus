@@ -1,15 +1,18 @@
-var webpack = require("webpack");
-var base = require("./base");
+const path = require("path");
+const webpack = require("webpack");
+const Configurator = require("webpack-config");
 
-base.debug = false;
+module.exports = new Configurator()
+.extend(path.resolve(__dirname, "base"))
+.merge({
+	debug: false,
 
-base.plugins = base.plugins.concat([
-	new webpack.optimize.DedupePlugin(),
-	
-	new webpack.optimize.UglifyJsPlugin({
-		minimize: true,
-		sourceMap: false
-	})
-]);
+	plugins: [
+	    new webpack.optimize.DedupePlugin(),
 
-module.exports = base;
+	    new webpack.optimize.UglifyJsPlugin({
+	        minimize: true,
+	        sourceMap: false,
+	    }),
+	]
+});

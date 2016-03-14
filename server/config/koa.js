@@ -6,6 +6,7 @@ import compress from "koa-compress";
 import serve from "koa-static";
 import session from "koa-generic-session";
 import MongoStore from "koa-generic-session-mongo";
+import favicon from "koa-favicon";
 import csrf from "koa-csrf";
 import views from "co-views";
 import config from "./config";
@@ -20,6 +21,7 @@ export default function(app, passport) {
     app.use(bodyParser());
     app.use(csrf());
 
+    app.use(favicon(path.resolve(config.root, "public/img/favicon.ico")));
     app.use(serve(path.resolve(config.root, "public")));
     app.use(function* (next) {
         this.render = views(`../${__dirname}/views`, {

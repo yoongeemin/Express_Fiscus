@@ -1,25 +1,17 @@
 import React from "react";
 import { connect } from "react-redux";
-import { SignIn, Ticker } from "../components/signIn";
-import { signIn } from "../actions/userActionCreator";
+import { SignIn, Ticker } from "../components/index";
+import { signOut } from "../actions/index";
 
 class NavBar extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.handleSignIn = (credentials) => {
-            this.props.dispatch(signIn(credentials));
-        };
-    }
-
     render() {
         const navbarComponents = this.props.authenticated
-            ? <a onClick={this.props.onSignOut} href="javascript:void(0);">Sign Out</a>
-            : <SignIn onSignIn={this.handleSignIn} />;
+            ? <a onClick={this.props.dispatch(signOut())} href="javascript:void(0);">Sign Out</a>
+            : <SignIn />;
 
-        const tickers = this.props.authenticated
-            ? <Ticker quotes={this.props.quotes} />
-            : null;
+        const tickers = this.props.profile.isEmpty()
+            ? null
+            : <Ticker quotes={this.props.quotes} />;
 
         return (
             <nav id="navbar" className="fill-width fixed-top box-shadow on-top">
@@ -27,7 +19,6 @@ class NavBar extends React.Component {
                     <a href="javascript:void(0);">FISCUS</a>
                     {navbarComponents}
                 </div>
-
                 {tickers}
             </nav>
         );
@@ -36,7 +27,7 @@ class NavBar extends React.Component {
 
 NavBar.propTypes = {
     dispatch: React.PropTypes.func.isRequired,
-    authenticated: React.PropTypes.bool.isRequired,
+    profile: React.PropTypes.object.isRequired,
     onSignOut: React.PropTypes.func.isRequired,
     quotes: React.PropTypes.array.isRequired,
 };

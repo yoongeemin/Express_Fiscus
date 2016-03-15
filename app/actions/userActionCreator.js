@@ -8,9 +8,11 @@ export function signIn(credentials) {
             type: Constants.POST,
             url: Constants.SIGNIN_API,
             data: credentials,
-        }).done(() => {
-            dispatch({ type: Constants.SIGNIN_USER_SUCCESS });
-            top.frames.location.reload(false);
+        }).done((response) => {
+            dispatch({
+                type: Constants.SIGNIN_USER_SUCCESS,
+                data: response,
+            });
         }).fail((xhr, status, error) => {
             dispatch({ type: Constants.SIGNIN_USER_FAILURE, error });
         });
@@ -26,7 +28,6 @@ export function signOut() {
             url: Constants.SIGNOUT_API,
         }).done(() => {
             dispatch({ type: Constants.SIGNOUT_USER_SUCCESS });
-            top.frames.location.reload(false);
         }).fail((xhr, status, error) => {
             dispatch({ type: Constants.SIGNOUT_USER_FAILURE, error });
         });

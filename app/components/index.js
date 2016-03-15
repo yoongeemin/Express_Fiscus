@@ -1,3 +1,3 @@
-export { Ticker } from "./tickers";
+export { Authentication } from "./authentication";
 export { Dashboard } from "./dashboard";
-export { SignIn } from "./signIn";
+export { Ticker } from "./tickers";

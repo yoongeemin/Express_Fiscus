@@ -7,9 +7,14 @@ import mailer from "../lib/promises/mailer";
 const TOKEN_SIZE = 256;
 
 export function* signIn() {
-    yield* passport.authenticate("local", {
-        successRedirect: "/",
-        failureRedirect: "/",
+    const self = this;
+    yield* passport.authenticate("local", function* (err, user, info) {
+        if (err) throw err;
+        else if (!user) this.redirect("/signin");
+        else {
+            yield self.login(user);
+            self.body = { profile: user.profile };
+        }
     });
 }
 

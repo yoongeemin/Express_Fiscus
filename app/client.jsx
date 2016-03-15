@@ -4,8 +4,8 @@ import ReactDOM from "react-dom";
 import { Router, Route, IndexRoute, browserHistory } from "react-router";
 import { syncHistoryWithStore } from "react-router-redux";
 import { configureStore } from "./lib/utils";
-import { Dashboard } from "./components/index";
-import { App, Authentication, SignUp } from "./containers/index";
+import { App, SignUp } from "./containers/index";
+import { Authentication, DashBoard } from "./components/index";
 import reducers from "./reducers/index";
 
 const store = configureStore(reducers, browserHistory);
@@ -14,7 +14,10 @@ const history = syncHistoryWithStore(browserHistory, store);
 const authentication = (nextState, replace) => {
     const authenticated = false;
     if (!authenticated) {
-        replace("/signin");
+        replace({
+            pathname: "/signin",
+            state: { nextPathname: "/dashboard" },
+        });
     }
     else {
         replace("/dashboard");
@@ -29,11 +32,10 @@ ReactDOM.render(
                     <IndexRoute onEnter={authentication} />
                     <Route path="/signin" component={Authentication} />
                     <Route path="/signup" component={SignUp} />
-                    <Route path="/dashboard" component={Dashboard} />
+                    <Route path="/dashboard" component={DashBoard} />
                 </Route>
             </Router>
         </Provider>
     ),
     document.body
 );
-

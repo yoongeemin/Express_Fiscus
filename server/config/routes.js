@@ -13,7 +13,7 @@ export default function(app) {
     router.post(`${API_PREFIX}/signUp`, authenticationControllers.signUp);
 
     router.get("*", function*() {
-        this.render("app", { });
+        this.body = yield this.render("app.hjs", { });
     });
 
     app.use(router.routes());

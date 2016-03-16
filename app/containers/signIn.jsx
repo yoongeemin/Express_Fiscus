@@ -1,7 +1,7 @@
 import React from "react";
 import { signIn } from "../actions/index";
 
-export default class SignIn extends React.Component {
+class SignIn extends React.Component {
     constructor(props) {
         super(props);
 
@@ -31,5 +31,13 @@ export default class SignIn extends React.Component {
 }
 
 SignIn.propTypes = {
+    dispatch: React.PropTypes.func.isRequired,
     onSignIn: React.PropTypes.func.isRequired,
 };
+
+function mapStateToProps(state) {
+    return {
+    };
+}
+
+export default connect(mapStateToProps)(SignIn);

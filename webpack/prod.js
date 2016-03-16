@@ -5,14 +5,14 @@ const Configurator = require("webpack-config");
 module.exports = new Configurator()
 .extend(path.resolve(__dirname, "base"))
 .merge({
-	debug: false,
+    debug: false,
 
-	plugins: [
-	    new webpack.optimize.DedupePlugin(),
+    plugins: [
+        new webpack.optimize.DedupePlugin(),
 
-	    new webpack.optimize.UglifyJsPlugin({
-	        minimize: true,
-	        sourceMap: false,
-	    }),
-	]
+        new webpack.optimize.UglifyJsPlugin({
+            minimize: true,
+            sourceMap: false,
+        }),
+    ],
 });

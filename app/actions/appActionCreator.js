@@ -11,10 +11,10 @@ export function getQuotes() {
                 type: Constants.GET_QUOTES_SUCCESS,
                 data: response,
             });
-        }).fail(function(xhr, status, error) {
+        }).fail((xhr, status, error) => {
             dispatch({
                 type: Constants.GET_QUOTES_FAILURE,
-                error: error,
+                error,
             });
         });
     };

@@ -21,6 +21,8 @@ class App extends React.Component {
 App.propTypes = {
     dispatch: React.PropTypes.func.isRequired,
     profile: React.PropTypes.object.isRequired,
+    quotes: React.PropTypes.object.isRequired,
+    children: React.PropTypes.array,
 };
 
 const mapStateToProps = (state) => {

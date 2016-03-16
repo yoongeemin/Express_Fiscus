@@ -14,7 +14,6 @@ module.exports = new Configurator().merge({
 
     plugins: [
         new webpack.optimize.OccurenceOrderPlugin(true),
-        //new webpack.optimize.CommonsChunkPlugin("common", "common.js"),
         new webpack.ProvidePlugin({
             jQuery: "jquery",
             $: "jquery",

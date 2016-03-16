@@ -10,6 +10,7 @@
     "plugins": ["react"],
 
     "rules": {
-        "react/prefer-stateless-function": 0,
+        "react/prefer-stateless-function": 1,
+        "react/display-name": 0,
     },
 }

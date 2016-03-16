@@ -21,10 +21,10 @@ export default function(app, passport) {
     app.use(bodyParser());
     app.use(csrf());
 
-    app.use(favicon(path.resolve(config.root, "public/img/favicon.ico")));
+    app.use(favicon(path.resolve(config.root, "public/img/favicon.png")));
     app.use(serve(path.resolve(config.root, "public")));
     app.use(function* (next) {
-        this.render = views(`../${__dirname}/views`, {
+        this.render = views(path.resolve(__dirname, "..", "views"), {
             map: { hjs: "hogan" },
             cache: config.viewCache,
         });
@@ -56,9 +56,13 @@ export default function(app, passport) {
         app.use(function* (next) {
             yield devMiddleware(compiler, {
                 publicPath: webpackConfig.output.publicPath,
-                noInfo: true,
+                quiet: true,
                 stats: {
                     color: true,
+                },
+                watchOptions: {
+                    aggregateTimeout: 1000,
+                    poll: true,
                 },
             }).bind(null, this.req, this.res);
             yield next;

@@ -4,17 +4,17 @@ const Configurator = require("webpack-config");
 module.exports = new Configurator()
 .extend(path.resolve(__dirname, "base"))
 .merge({
-	debug: true,
+    debug: true,
 
-	devtool: "eval-cheap-module-source-map",
+    devtool: "eval-cheap-module-source-map",
 
-	module: {
-		preLoaders: [
-		    {
-		        test: /\.jsx?$/,
-		        exclude: /node_modules/,
-		        loader: "eslint-loader",
-		    },
-		]
-	},
+    module: {
+        preLoaders: [
+            {
+                test: /\.jsx?$/,
+                exclude: /node_modules/,
+                loader: "eslint-loader",
+            },
+        ],
+    },
 });

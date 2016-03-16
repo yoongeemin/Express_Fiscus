@@ -1,2 +1,5 @@
-export * from "./appActionCreator";
-export * from "./userActionCreator";
+import * as appActionCreator from "./appActionCreator";
+import * as userActionCreator from "./userActionCreator";
+
+export { appActionCreator };
+export { userActionCreator };

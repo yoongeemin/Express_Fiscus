@@ -30,14 +30,14 @@ NavBar.propTypes = {
     quotes: React.PropTypes.array.isRequired,
 };
 
-function mapStateToProps(state) {
-    return {
-        state,
-        // quotes: state.quoteReducer.quotes,
-        // profile: state.fiscusReducer.profile,
-        // apps: state.fiscusReducer.apps,
-        // activeApp: state.fiscusReducer.activeApp
-    };
-}
+//function mapStateToProps(state) {
+//    return state;
+//    //return {
+//        // quotes: state.quoteReducer.quotes,
+//        // profile: state.fiscusReducer.profile,
+//        // apps: state.fiscusReducer.apps,
+//        // activeApp: state.fiscusReducer.activeApp
+//    //};
+//}
 
-export default connect(mapStateToProps)(NavBar);
+export default connect()(NavBar);

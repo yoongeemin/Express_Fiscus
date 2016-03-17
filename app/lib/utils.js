@@ -1,7 +1,6 @@
 import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import createLogger from "redux-logger";
-import { syncHistory } from "react-router-redux";
 
 //export function dateToString(date) {
 //    const monthString = date.month()+1<10 ? "0"+(date.month()+1).toString() : (date.month()+1).toString();
@@ -24,12 +23,12 @@ import { syncHistory } from "react-router-redux";
 // 	});
 // }
 
-export function configureStore(reducer, history) {
-    const middlewares = [thunk, syncHistory(history)];
+export function configureStore(reducer) {
+    const middlewares = [thunk];
 
     if (process.env.NODE_ENV === "development") {
         middlewares.push(createLogger());
     }
 
-    return applyMiddleware(...middlewares)(createStore)(reducer);
+    return createStore(reducer, applyMiddleware(...middlewares));
 }

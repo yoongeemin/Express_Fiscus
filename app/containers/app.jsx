@@ -4,9 +4,9 @@ import NavBar from "./navbar";
 import { getQuotes } from "../actions/index";
 
 class App extends React.Component {
-    componentDidMount() {
-        this.props.dispatch(getQuotes());
-    }
+    //componentDidMount() {
+    //    this.props.dispatch(getQuotes());
+    //}
 
     render() {
         return (

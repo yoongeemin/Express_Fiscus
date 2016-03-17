@@ -8,6 +8,7 @@ import session from "koa-generic-session";
 import MongoStore from "koa-generic-session-mongo";
 import favicon from "koa-favicon";
 import csrf from "koa-csrf";
+import cors from "koa-cors";
 import views from "co-views";
 import config from "./config";
 
@@ -20,6 +21,7 @@ export default function(app, passport) {
     app.use(compress());
     app.use(bodyParser());
     app.use(csrf());
+    app.use(cors());
 
     app.use(favicon(path.resolve(config.root, "public/img/favicon.png")));
     app.use(serve(path.resolve(config.root, "public")));

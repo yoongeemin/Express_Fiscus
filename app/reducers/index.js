@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import { routeReducer as routing } from "react-redux";
+import { routerReducer as routing } from "react-router-redux";
 import userReducer from "./userReducer";
 import quoteReducer from "./quoteReducer";
 

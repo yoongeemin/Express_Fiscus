@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 import { signIn } from "../actions/index";
 
 class SignIn extends React.Component {
@@ -34,10 +35,10 @@ SignIn.propTypes = {
     dispatch: React.PropTypes.func.isRequired,
     onSignIn: React.PropTypes.func.isRequired,
 };
+//
+//function mapStateToProps(state) {
+//    return {
+//    };
+//}
 
-function mapStateToProps(state) {
-    return {
-    };
-}
-
-export default connect(mapStateToProps)(SignIn);
+export default connect()(SignIn);

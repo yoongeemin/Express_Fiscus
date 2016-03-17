@@ -8,7 +8,7 @@ import { App, SignUp } from "./containers/index";
 import { Authentication, DashBoard } from "./components/index";
 import reducers from "./reducers/index";
 
-const store = configureStore(reducers, browserHistory);
+const store = configureStore(reducers);
 const history = syncHistoryWithStore(browserHistory, store);
 
 const authentication = (nextState, replace) => {
@@ -24,6 +24,22 @@ const authentication = (nextState, replace) => {
     }
 };
 
+//ReactDOM.render(
+//    (
+//        <Provider store={store}>
+//            <Router history={history}>
+//                <Route path="/" component={App}>
+//                    <IndexRoute onEnter={authentication} />
+//                    <Route path="/signin" component={Authentication} />
+//                    <Route path="/signup" component={SignUp} />
+//                    <Route path="/dashboard" component={DashBoard} />
+//                </Route>
+//            </Router>
+//        </Provider>
+//    ),
+//    document.getElementById("main")
+//);
+
 ReactDOM.render(
     (
         <Provider store={store}>
@@ -31,11 +47,9 @@ ReactDOM.render(
                 <Route path="/" component={App}>
                     <IndexRoute onEnter={authentication} />
                     <Route path="/signin" component={Authentication} />
-                    <Route path="/signup" component={SignUp} />
-                    <Route path="/dashboard" component={DashBoard} />
                 </Route>
             </Router>
         </Provider>
     ),
-    document.body
+    document.getElementById("main")
 );

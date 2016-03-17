@@ -9,7 +9,7 @@ module.exports = new Configurator()
     // Add webpack hot reloading
     entry: [
         "webpack-hot-middleware/client",
-        "webpack/hot/only-dev-server",
+        "webpack/hot/dev-server",
     ],
 
     plugins: [

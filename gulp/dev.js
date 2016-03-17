@@ -8,7 +8,7 @@ module.exports = function() {
             "NODE_ENV": "development",
             "PORT": 8000,
         },
-        watch: [path.resolve(__dirname, "..", "public", "assets", "*")],
+        watch: [path.resolve(__dirname, "..", "public", "assets", "server.js")],
         ext: "js css",
     })
     .on("restart", () => {

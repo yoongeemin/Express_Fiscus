@@ -5,19 +5,121 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da06f9cd-3da7-4209-b7e4-3a94787b7753" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/views/app.hjs" afterPath="$PROJECT_DIR$/server/views/app.hjs" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.004229ed000332c526ca.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.00afcd3dab05b2a40498.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.00fee3ac9047532235e6.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.08f6630a4f94d3ec3769.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.0c3154bd8a1cb0760999.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.0cbd6b04e2decfba6e8f.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.0dba6e49a639bfbe69a6.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.0eea0a342558e99fff33.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.121eefcae7b99ac311aa.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.1bbc4fb970cdc1c6d2a0.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.2421d00fb9a5a7b8e24c.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.2514f2e0ffbb1eb9043b.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.2ab9df56e3dbaaf98c0e.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.2bc284228e154156a9df.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.3b4f053f007bd90fa2df.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.3ba86e399c3457a042e8.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.3fd40293aa178765d39e.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.42882b8b4270f5052801.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.4368909fe32438d7d053.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.45bdbe8cfb0b062158a8.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.4ce800150010c0723465.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.54d7ca403c7369fd68cb.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.54edd0d2b38dc00dc3e5.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.59eadd5cb478df00d991.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.5de516fe8d415059b62d.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.63cc9306720a11a0e0c2.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.6b30b8b17bcc5ff417ce.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.6bdd0b544541c7243ce6.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.704dc5371465d5b9ae28.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.74578cd050ac61f7840b.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.74c5f1da970a03ad6e02.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.7a9dcd2ac7579a3ca830.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.7eb5fd0074cf4bea0607.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.7fe2eb8463d9ef240517.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.8067ed8f0c73c867e34a.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.86edf47800d29f25633a.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.88a02be56778e8b78b57.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.90a55fb34463bfab7846.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.91711712f6900206b2ca.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.9f74c099d073b4bf729a.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.b1b96401f18be1104cde.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.b73bad5bf6cb757fd314.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.b785944c6d6295c13f11.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.c0c8a1ea9a0518835471.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.c174c1b021c1ff9df7a6.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.c301e9f5d40c9b74406d.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.ca9bcd18ba360134f522.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.cd633a1b43da56bbea9e.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.da64d26651021f02d251.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.e07b21b4d76f7ddb959c.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.e240121408c44fe43de2.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.e24424a1ca8b6f800b12.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.e8ca3f5827f0b7d3aa98.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0.f2ccf633f8f6dff97047.hot-update.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/004229ed000332c526ca.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/00afcd3dab05b2a40498.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/00fee3ac9047532235e6.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/08f6630a4f94d3ec3769.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0c3154bd8a1cb0760999.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0cbd6b04e2decfba6e8f.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0dba6e49a639bfbe69a6.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/0eea0a342558e99fff33.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/121eefcae7b99ac311aa.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/1bbc4fb970cdc1c6d2a0.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/2421d00fb9a5a7b8e24c.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/2514f2e0ffbb1eb9043b.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/2ab9df56e3dbaaf98c0e.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/2bc284228e154156a9df.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/3b4f053f007bd90fa2df.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/3ba86e399c3457a042e8.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/3fd40293aa178765d39e.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/42882b8b4270f5052801.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/4368909fe32438d7d053.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/45bdbe8cfb0b062158a8.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/4ce800150010c0723465.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/54d7ca403c7369fd68cb.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/54edd0d2b38dc00dc3e5.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/59eadd5cb478df00d991.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/5de516fe8d415059b62d.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/63cc9306720a11a0e0c2.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/6b30b8b17bcc5ff417ce.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/6bdd0b544541c7243ce6.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/704dc5371465d5b9ae28.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/74578cd050ac61f7840b.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/74c5f1da970a03ad6e02.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/7a9dcd2ac7579a3ca830.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/7eb5fd0074cf4bea0607.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/7fe2eb8463d9ef240517.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/8067ed8f0c73c867e34a.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/86edf47800d29f25633a.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/88a02be56778e8b78b57.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/90a55fb34463bfab7846.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/91711712f6900206b2ca.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/9f74c099d073b4bf729a.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/b1b96401f18be1104cde.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/b73bad5bf6cb757fd314.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/b785944c6d6295c13f11.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/c0c8a1ea9a0518835471.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/c174c1b021c1ff9df7a6.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/c301e9f5d40c9b74406d.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/ca9bcd18ba360134f522.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/cd633a1b43da56bbea9e.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/da64d26651021f02d251.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/e07b21b4d76f7ddb959c.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/e240121408c44fe43de2.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/e24424a1ca8b6f800b12.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/e8ca3f5827f0b7d3aa98.hot-update.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/f2ccf633f8f6dff97047.hot-update.json" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webpack/app/app.dev.js" afterPath="$PROJECT_DIR$/webpack/app/app.dev.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/app.js" afterPath="$PROJECT_DIR$/public/assets/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/containers/app.jsx" afterPath="$PROJECT_DIR$/app/containers/app.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/authentication.jsx" afterPath="$PROJECT_DIR$/app/components/authentication.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/client.jsx" afterPath="$PROJECT_DIR$/app/client.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/dashboard.jsx" afterPath="$PROJECT_DIR$/app/components/dashboard.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/reducers/index.js" afterPath="$PROJECT_DIR$/app/reducers/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulp/dev.js" afterPath="$PROJECT_DIR$/gulp/dev.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/config/koa.js" afterPath="$PROJECT_DIR$/server/config/koa.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/containers/navbar.jsx" afterPath="$PROJECT_DIR$/app/containers/navbar.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/server.js" afterPath="$PROJECT_DIR$/public/assets/server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/containers/signIn.jsx" afterPath="$PROJECT_DIR$/app/containers/signIn.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/lib/utils.js" afterPath="$PROJECT_DIR$/app/lib/utils.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Fiscus.iws" />
@@ -44,17 +146,77 @@
         <entry file="file://$PROJECT_DIR$/app/containers/navbar.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+              <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/containers/app.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.32110092">
-              <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dev.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webpack/dev.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.dev.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webpack/app/app.dev.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.base.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webpack/app/app.base.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="30" column="2" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webpack/base.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="6" column="18" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dev.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gulp/dev.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="76" selection-start-line="10" selection-start-column="76" selection-end-line="10" selection-end-column="76" />
               <folding />
             </state>
           </provider>
@@ -65,6 +227,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="koa.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server/config/koa.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.24311927">
+              <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -116,7 +288,6 @@
         <option value="$PROJECT_DIR$/webpack/app/temp.js" />
         <option value="$PROJECT_DIR$/webpack/server/server.dev.js" />
         <option value="$PROJECT_DIR$/webpack/server/server.prod.js" />
-        <option value="$PROJECT_DIR$/webpack/app/app.dev.js" />
         <option value="$PROJECT_DIR$/webpack/server/server.base.js" />
         <option value="$PROJECT_DIR$/server/server.js" />
         <option value="$PROJECT_DIR$/.eslintrc.react" />
@@ -126,12 +297,10 @@
         <option value="$PROJECT_DIR$/.eslintrc.base" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/output.txt" />
-        <option value="$PROJECT_DIR$/gulp/dev.js" />
         <option value="$PROJECT_DIR$/webpack/base.js" />
         <option value="$PROJECT_DIR$/webpack/dev.js" />
         <option value="$PROJECT_DIR$/webpack/prod.js" />
         <option value="$PROJECT_DIR$/server/config/routes.js" />
-        <option value="$PROJECT_DIR$/server/config/koa.js" />
         <option value="$PROJECT_DIR$/app/components/dashboard.jsx" />
         <option value="$PROJECT_DIR$/app/lib/utils.js" />
         <option value="$PROJECT_DIR$/app/reducers/index.js" />
@@ -140,7 +309,10 @@
         <option value="$PROJECT_DIR$/app/containers/navbar.jsx" />
         <option value="$PROJECT_DIR$/app/containers/signIn.jsx" />
         <option value="$PROJECT_DIR$/app/client.jsx" />
+        <option value="$PROJECT_DIR$/webpack/app/app.dev.js" />
+        <option value="$PROJECT_DIR$/gulp/dev.js" />
         <option value="$PROJECT_DIR$/app/containers/app.jsx" />
+        <option value="$PROJECT_DIR$/server/config/koa.js" />
       </list>
     </option>
   </component>
@@ -233,6 +405,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="webpack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fiscus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fiscus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webpack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fiscus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fiscus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="server" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -251,7 +455,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -265,7 +469,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -279,65 +483,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reducers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Fiscus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Fiscus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Fiscus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Fiscus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="containers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Fiscus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Fiscus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
+              <option name="myItemId" value="gulp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -705,12 +851,12 @@
       <workItem from="1457433313986" duration="20000" />
       <workItem from="1457664294260" duration="2320000" />
       <workItem from="1457807746743" duration="23719000" />
-      <workItem from="1458090665500" duration="6385000" />
+      <workItem from="1458090665500" duration="7729000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48241000" />
+    <option name="totallyTimeSpent" value="49585000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="23" width="1276" height="777" extended-state="0" />
@@ -732,7 +878,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22492163" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18181819" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -852,6 +998,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.32110092">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -951,14 +1098,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3440367">
-          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.eslintrc.base">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.648">
@@ -970,26 +1109,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webpack/dev.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27522936">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webpack/prod.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.36697248">
           <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpack/server/server.dev.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13761468">
-          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
           <folding />
         </state>
       </provider>
@@ -1002,42 +1125,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webpack/server/server.base.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6880734">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webpack/app/app.prod.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16055046">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpack/app/app.dev.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.04587156">
-          <caret line="2" column="47" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpack/app/app.base.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6880734">
-          <caret line="30" column="2" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpack/base.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36697248">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1058,14 +1149,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/config/koa.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2522936">
-          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.625">
@@ -1078,14 +1161,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.06880734">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulp/dev.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38990825">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1130,6 +1205,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/webpack/server/server.dev.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29816514">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack/server/server.base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.64220184">
+          <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/containers/navbar.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulp/dev.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="76" selection-start-line="10" selection-start-column="76" selection-end-line="10" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/client.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1138,18 +1245,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/containers/navbar.jsx">
+    <entry file="file://$PROJECT_DIR$/server/server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/containers/app.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32110092">
-          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack/dev.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack/app/app.dev.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack/app/app.base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="2" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack/base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/config/koa.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24311927">
+          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
           <folding />
         </state>
       </provider>

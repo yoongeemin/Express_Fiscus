@@ -11,6 +11,7 @@ class App extends React.Component {
     render() {
         return (
             <div id="app">
+                hi
                 <NavBar profile={this.props.profile} quotes={this.props.quotes} />
                 {this.props.children}
             </div>

@@ -51,32 +51,34 @@ export default function(app, passport) {
     // Configure hot reloading
     if (process.env.NODE_ENV === "development") {
         const webpackConfig = require("../../webpack/app/app.dev");
-        const devMiddleware = require("webpack-dev-middleware");
-        const hotMiddleware = require("webpack-hot-middleware");
+        const devMiddleware = require("koa-webpack-dev-middleware");
+        const hotMiddleware = require("koa-webpack-hot-middleware");
         const compiler = require("webpack")(webpackConfig);
 
-        app.use(function* (next) {
-            yield devMiddleware(compiler, {
-                publicPath: webpackConfig.output.publicPath,
-                quiet: true,
-                stats: {
-                    color: true,
-                },
-                watchOptions: {
-                    aggregateTimeout: 1000,
-                    poll: true,
-                },
-            }).bind(null, this.req, this.res);
-            yield next;
-        });
+        app.use(devMiddleware(compiler, {
+            publicPath: webpackConfig.output.publicPath,
+            quiet: true,
+            stats: {
+                color: true,
+            },
+            watchOptions: {
+                aggregateTimeout: 5000,
+                poll: true,
+            },
+        }));
 
-        app.use(function* (next) {
-            yield hotMiddleware(compiler, {
-                heartbeat: 10 * 1000,
-                reload: true,
-                timeout: 20000,
-            }).bind(null, this.req, this.res);
-            yield next;
-        });
+        //app.use(function* (next) {
+        //    yield hotMiddleware(compiler, {
+        //        heartbeat: 10 * 1000,
+        //        reload: true,
+        //        timeout: 20000,
+        //    }).bind(null, this.req, this.res);
+        //    yield next;
+        //});
+        app.use(hotMiddleware(compiler, {
+            heartbeat: 10 * 1000,
+            reload: true,
+            timeout: 20000,
+        }));
     }
 }

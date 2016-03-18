@@ -42,14 +42,7 @@ const authentication = (nextState, replace) => {
 
 ReactDOM.render(
     (
-        <Provider store={store}>
-            <Router history={history}>
-                <Route path="/" component={App}>
-                    <IndexRoute onEnter={authentication} />
-                    <Route path="/signin" component={Authentication} />
-                </Route>
-            </Router>
-        </Provider>
+        <div>hi</div>
     ),
     document.getElementById("main")
 );

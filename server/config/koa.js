@@ -58,24 +58,13 @@ export default function(app, passport) {
         app.use(devMiddleware(compiler, {
             publicPath: webpackConfig.output.publicPath,
             quiet: true,
-            stats: {
-                color: true,
-            },
             watchOptions: {
-                aggregateTimeout: 5000,
-                poll: true,
+                aggregateTimeout: 2000,
             },
         }));
 
-        //app.use(function* (next) {
-        //    yield hotMiddleware(compiler, {
-        //        heartbeat: 10 * 1000,
-        //        reload: true,
-        //        timeout: 20000,
-        //    }).bind(null, this.req, this.res);
-        //    yield next;
-        //});
         app.use(hotMiddleware(compiler, {
+            path: "/__webpack_hmr",
             heartbeat: 10 * 1000,
             reload: true,
             timeout: 20000,

@@ -24,6 +24,7 @@ module.exports = new Configurator().merge({
 
     output: {
         filename: "server.js",
+        path: path.resolve(__dirname, "..", "..", "public"),
     },
 
     externals: nodeModules,

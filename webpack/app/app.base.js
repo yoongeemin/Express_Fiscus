@@ -7,6 +7,8 @@ module.exports = new Configurator().merge({
 
     output: {
         filename: "app.js",
+        publicPath: "/assets/",
+        path: "/",
     },
 
     plugins: [

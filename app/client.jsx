@@ -12,7 +12,7 @@ const store = configureStore(reducers);
 const history = syncHistoryWithStore(browserHistory, store);
 
 const authentication = (nextState, replace) => {
-    const authenticated = false;
+    const authenticated = true;
     if (!authenticated) {
         replace({
             pathname: "/signin",
@@ -42,7 +42,7 @@ const authentication = (nextState, replace) => {
 
 ReactDOM.render(
     (
-        <div>hi</div>
+        <div>hello</div>
     ),
     document.getElementById("main")
 );

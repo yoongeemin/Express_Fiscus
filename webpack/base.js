@@ -3,11 +3,6 @@ const webpack = require("webpack");
 const Configurator = require("webpack-config");
 
 module.exports = new Configurator().merge({
-    output: {
-        publicPath: "/assets/",
-        path: path.resolve(__dirname, "..", "public", "assets"),
-    },
-
     resolve: {
         extensions: ["", ".js", ".jsx"],
     },

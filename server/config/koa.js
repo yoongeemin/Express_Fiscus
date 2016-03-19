@@ -65,8 +65,9 @@ export default function(app, passport) {
 
         app.use(hotMiddleware(compiler, {
             path: "/__webpack_hmr",
-            heartbeat: 10 * 1000,
+            quiet: true,
             reload: true,
+            heartbeat: 10 * 1000,
             timeout: 20000,
         }));
     }

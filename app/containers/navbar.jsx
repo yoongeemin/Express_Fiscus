@@ -14,7 +14,6 @@ const NavBar = () => {
 
     return (
         <nav id="navbar" className="fill-width fixed-top box-shadow on-top">
-            hellllolllolloasdfasdfasdfasdf
             <div id="navbar-main" className="text-color-white">
                 <a href="javascript:void(0);">FISCUS</a>
                 {navbarComponents}

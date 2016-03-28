@@ -1,26 +1,51 @@
-import koa from "koa";
-import mongoose from "mongoose";
-import passport from "passport";
-import bootstrapPassport from "./config/passport";
-import bootstrapKoa from "./config/koa";
-import bootstrapRoutes from "./config/routes";
-import config from "./config/config";
+"use strict";
+const koa = require("koa");
+const mongoose = require("mongoose");
+const passport = require("passport");
+const bootstrapPassport = require("./config/passport");
+const bootstrapKoa = require("./config/koa");
+const bootstrapRoutes = require("./config/routes");
+const config = require("./config/config");
+const LOGGER = require("./lib/logger");
 
 const app = koa();
 bootstrapPassport(app, passport);
 bootstrapKoa(app, passport);
 bootstrapRoutes(app);
 
-function listen() {
-    app.listen(process.env.PORT);
-    console.log(`Server starting on port: ${process.env.PORT}`);
-}
-
 function connect() {
+	LOGGER.info(`Connecting to mongodb server: ${config.db}`);
     mongoose.connect(config.db);
-    return mongoose.connection;
 }
 
-connect()
-    .on("error", console.error)
-    .on("open", listen);
+function close() {
+	mongoose.connection.close(() => {
+		LOGGER.info(`Closing connection to mongodb server: ${config.db}`);
+		process.exit(0);
+	});
+}
+
+function listen() {
+	LOGGER.info(`Server starting on port: ${process.env.PORT}`);
+    app.listen(process.env.PORT);
+}
+
+if (!module.parent) {
+	connect();
+	mongoose.connection
+		.on("connected", () => {
+			LOGGER.info(`Connected to mongodb server: ${config.db}`);
+			listen();
+		});
+		.on("disconnected", () => {
+			LOGGER.error(`Disconnected from mongodb server`);
+			connect();
+		}).
+		.on("error", (err) => {
+			LOGGER.error(`Failed to connect to mongodb server: ${config.db} with error: ${err}`);
+		});
+
+	process
+		.on("SIGINT", close)
+		.on("SIGTERM", close);
+}
